@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <body style="background-color:green;">
+    </body>
+  
+</head>
+<head> 
+    <style type="text/css"> 
+      div { 
+        background-color:rgb(0, 255, 13); 
+      } 
+    </style> 
+  </head>
+  
+  <body> 
+    <div> 
+        請輸入年齡
+        <input type="text" class="text">
+        <input type="button" value="計算" class="btn">
+        =
+        人的age是
+        <span class="p">
+            
+        </span>
+        貓的age是
+        <span class="cat">
+    
+        </span>
+    </body>
+    </div> 
+  </body>
+  <script>
+  var btn = document.querySelector(".btn");
+        btn.addEventListener('click',function(){
+            var p = document.querySelector('.text');
+            var a = parseInt(p.value);
+            if(a>=1){
+                var b = 16+(a-1)*4;
+            }
+            if(a<1){
+                var b = (a-1)*4
+            }
+            var cat = document.querySelector(".cat");
+            cat.textContent = b;
+            if(a>=16){
+                var c = (a-16)/4;
+                c +=1;
+            }else{
+                var c = (a)/16;
+            }
+            
+            var p = document.querySelector(".p");
+            p.textContent = c;
+            
+        })
+    </script>
+</html>
